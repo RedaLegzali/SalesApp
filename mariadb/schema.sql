@@ -1,4 +1,8 @@
 create database if not exists furnitures;
+create user if not exists 'furnitures'@'localhost' identified by 'furnitures';
+grant all privileges on furnitures.* to 'furnitures'@'localhost';
+flush privileges;
+
 use furnitures;
 
 create table if not exists channels (
